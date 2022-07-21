@@ -28,6 +28,7 @@ namespace asiodnp3
 
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<Binary>>& values)
 {
+    std::cout << "=========I am very important, look at me here.=========== const ICollection<Indexed<Binary>>& values" << std::endl;
 	return PrintAll(info, values);
 }
 
@@ -38,6 +39,7 @@ void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Index
 
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<Analog>>& values)
 {
+    std::cout << "=========I am very important, look at me here.=========== const ICollection<Indexed<Analog>>& values" << std::endl;
 	return PrintAll(info, values);
 }
 
@@ -53,11 +55,13 @@ void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Index
 
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<BinaryOutputStatus>>& values)
 {
+    std::cout << "=========I am very important, look at me here.=========== const ICollection<Indexed<BinaryOutputStatus>>& values" << std::endl;
 	return PrintAll(info, values);
 }
 
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<AnalogOutputStatus>>& values)
 {
+    std::cout << "=========I am very important, look at me here.=========== const ICollection<Indexed<AnalogOutputStatus>>& values" << std::endl;
 	return PrintAll(info, values);
 }
 
@@ -97,6 +101,7 @@ void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Index
 	};
 
 	values.ForeachItem(print);
+	std::cout << "=========I am very important, look at me here.===========" << std::endl;
 }
 
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<AnalogCommandEvent>>& values)
@@ -111,6 +116,7 @@ void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Index
 	};
 
 	values.ForeachItem(print);
+	std::cout << "=========I am very important, look at me here.===========" << std::endl;
 }
 
 void PrintingSOEHandler::Process(const HeaderInfo& info, const ICollection<Indexed<SecurityStat>>& values)
