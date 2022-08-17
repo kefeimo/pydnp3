@@ -142,6 +142,9 @@ clr/opendnp3.shfbproj_*
 **/**/target
 **/.idea
 
+# vscode
+**/.vscode
+
 
 # lcov/gcov generated files
 *.gcno
