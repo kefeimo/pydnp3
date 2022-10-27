@@ -33,11 +33,17 @@ def main():
     _log.debug('Initialization complete. OutStation in command loop.')
 
     master_application = MyMasterNew()
+    num_open = master_application.channel.GetStatistics().channel.numOpen
+    print(f"++++++++++++before master_application.channel.GetStatistics().channel.numOpen {num_open}")
     master_application.start()
     _log.debug('Initialization complete. Master Station in command loop.')
 
+    sleep(2)
+    num_open = master_application.channel.GetStatistics().channel.numOpen
+    print(f"++++++++++++after master_application.channel.GetStatistics().channel.numOpen {num_open}")
+
     count = 0
-    while count < 10:
+    while count < 2:
         sleep(1)  # Note: hard-coded, master station query every 1 sec.
 
         count += 1
@@ -143,6 +149,7 @@ def main():
 
     _log.debug('Exiting.')
     master_application.shutdown()
+    sleep(1)
     outstation_application.shutdown()
 
 
