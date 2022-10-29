@@ -43,8 +43,8 @@ using namespace std;
 
 void bind_EventType(py::module &m)
 {
-    // ----- constant: opendnp3::NUM_OUTSTATION_EVENT_TYPES -----
-    m.attr("NUM_OUTSTATION_EVENT_TYPES") = opendnp3::NUM_OUTSTATION_EVENT_TYPES;
+//    // ----- constant: opendnp3::NUM_OUTSTATION_EVENT_TYPES -----
+//    m.attr("NUM_OUTSTATION_EVENT_TYPES") = opendnp3::NUM_OUTSTATION_EVENT_TYPES;
 
     // ----- enum class: opendnp3::EventType -----
     py::enum_<opendnp3::EventType>(m, "EventType")
@@ -55,7 +55,7 @@ void bind_EventType(py::module &m)
         .value("DoubleBitBinary", opendnp3::EventType::DoubleBitBinary)
         .value("BinaryOutputStatus", opendnp3::EventType::BinaryOutputStatus)
         .value("AnalogOutputStatus", opendnp3::EventType::AnalogOutputStatus)
-        .value("SecurityStat", opendnp3::EventType::SecurityStat);
+//        .value("SecurityStat", opendnp3::EventType::SecurityStat);
 
     // ----- enum class: opendnp3::EventClass -----
     py::enum_<opendnp3::EventClass>(m, "EventClass")

@@ -63,7 +63,7 @@ void bind_EventBufferConfig(py::module &m)
             ":type maxFrozenCounterEvents: unsigned short \n"
             ":type maxBinaryOutputStatusEvents: unsigned short \n"
             ":type maxAnalogOutputStatusEvents: unsigned short \n"
-            ":type maxSecurityStatisticEvents: unsigned short",
+//            ":type maxSecurityStatisticEvents: unsigned short",
             py::arg("maxBinaryEvents") = 0,
             py::arg("maxDoubleBinaryEvents") = 0,
             py::arg("maxAnalogEvents") = 0,
@@ -71,7 +71,7 @@ void bind_EventBufferConfig(py::module &m)
             py::arg("maxFrozenCounterEvents") = 0,
             py::arg("maxBinaryOutputStatusEvents") = 0,
             py::arg("maxAnalogOutputStatusEvents") = 0,
-            py::arg("maxSecurityStatisticEvents") = 0
+//            py::arg("maxSecurityStatisticEvents") = 0
         )
 
         .def_readwrite(
@@ -123,12 +123,12 @@ void bind_EventBufferConfig(py::module &m)
             ":type maxAnalogOutputStatusEvents: unsigned short"
         )
 
-        .def_readwrite(
-            "maxSecurityStatisticEvents",
-            &opendnp3::EventBufferConfig::maxSecurityStatisticEvents,
-            "   The number of security statistic events the outstation will buffer before overflowing. \n"
-            ":type maxSecurityStatisticEvents: unsigned short"
-        )
+//        .def_readwrite(
+//            "maxSecurityStatisticEvents",
+//            &opendnp3::EventBufferConfig::maxSecurityStatisticEvents,
+//            "   The number of security statistic events the outstation will buffer before overflowing. \n"
+//            ":type maxSecurityStatisticEvents: unsigned short"
+//        )
 
         .def_static(
             "AllTypes",
@@ -139,12 +139,12 @@ void bind_EventBufferConfig(py::module &m)
             py::arg("sizes")
         )
 
-        .def(
-            "GetMaxEventsForType",
-            &opendnp3::EventBufferConfig::GetMaxEventsForType,
-            "Retrieve the number of events using a type enumeration.",
-            py::arg("type")
-        )
+//        .def(
+//            "GetMaxEventsForType",
+//            &opendnp3::EventBufferConfig::GetMaxEventsForType,
+//            "Retrieve the number of events using a type enumeration.",
+//            py::arg("type")
+//        )
 
         .def(
             "TotalEvents",

@@ -60,7 +60,8 @@ void bind_DatabaseSizes(py::module &m)
              ":type numFrozenCounter: unsigned short \n"
              ":type numBinaryOutputStatus: unsigned short \n"
              ":type numAnalogOutputStatus: unsigned short \n"
-             ":type numTimeAndInterval: unsigned short",
+             ":type numTimeAndInterval: unsigned short \n"
+             ":type numOctetString: unsigned short",
              py::arg("numBinary"), py::arg("numDoubleBinary"), py::arg("numAnalog"), py::arg("numCounter"),
              py::arg("numFrozenCounter"), py::arg("numBinaryOutputStatus"), py::arg("numAnalogOutputStatus"),
              py::arg("numTimeAndInterval"))

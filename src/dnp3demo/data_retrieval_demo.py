@@ -7,12 +7,12 @@ from pydnp3 import opendnp3
 
 
 # from src.dnp3_python.master_new import MyMasterNew
-# from dnp3_python.dnp3station.master_new import MyMasterNew
+from dnp3_python.dnp3station.master_new import MyMasterNew
 # from src.dnp3_python.outstation_new import MyOutStationNew
-# from dnp3_python.dnp3station.outstation_new import MyOutStationNew
+from dnp3_python.dnp3station.outstation_new import MyOutStationNew
 
-from src.dnp3_python.dnp3station.master_new import MyMasterNew
-from src.dnp3_python.dnp3station.outstation_new import MyOutStationNew
+# from src.dnp3_python.dnp3station.master_new import MyMasterNew
+# from src.dnp3_python.dnp3station.outstation_new import MyOutStationNew
 
 import datetime
 from time import sleep
@@ -146,6 +146,10 @@ def main():
         result = master_application.get_val_by_group_variation_index(group=40, variation=4, index=0)
         print(f"===important log: case7c get_db_by_group_variation_index ==== {count}", datetime.datetime.now(),
               result)
+
+
+        # if count >=3 :
+        #     outstation_application.shutdown()
 
     _log.debug('Exiting.')
     master_application.shutdown()

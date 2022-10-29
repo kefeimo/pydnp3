@@ -220,10 +220,10 @@ void bind_MeasurementInfo(py::module &m)
     // ----- class: opendnp3::SecurityStatInfo -----
     py::class_<opendnp3::SecurityStatInfo>(m, "SecurityStatInfo")
 
-        .def_property_readonly_static(
-            "EventTypeEnum",
-            [](py::object) { return opendnp3::SecurityStatInfo::EventTypeEnum; }
-        )
+//        .def_property_readonly_static(
+//            "EventTypeEnum",
+//            [](py::object) { return opendnp3::SecurityStatInfo::EventTypeEnum; }
+//        )
 
         .def_property_readonly_static(
             "DefaultEventVariation",

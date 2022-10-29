@@ -48,7 +48,7 @@ namespace opendnp3 {
 #include "container/ArrayView.h"
 #include "container/Buffer.h"
 #include "container/HasSize.h"
-#include "container/LinkedList.h"
+//#include "container/LinkedList.h"
 #include "container/Pair.h"
 #include "container/Queue.h"
 #include "container/RingBuffer.h"
